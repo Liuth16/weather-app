@@ -11,7 +11,6 @@ async function doQuery(location) {
       throw new Error(`Response status: ${response.status}`);
     }
     const json = await response.json();
-    console.log(json);
     return json;
   } catch (error) {
     console.error(error.message);
@@ -21,7 +20,11 @@ async function doQuery(location) {
 function findInfoByDate(json, date) {
   try {
     const { resolvedAddress } = json;
-    console.log(resolvedAddress);
+    const place = resolvedAddress.split(",");
+    if (place[0] !== "London") {
+      console.log("You meant:");
+      console.log(resolvedAddress, "?");
+    }
     const specificDate = json.days.find((day) => day.datetime === date);
     console.log(specificDate);
     if (!specificDate || specificDate.datetime === undefined) {
