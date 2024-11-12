@@ -12,5 +12,5 @@ import { getInfo } from "./controller";
 // } catch (error) {
 //   console.error(error.message);
 // }
-console.log(getInfo());
+getInfo();
 // getInfo();

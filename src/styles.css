@@ -46,3 +46,40 @@ h6 {
 }
 
 /* End of reset */
+
+body {
+  background-image: url("./images/sky.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.current-info {
+  margin: 1rem;
+  height: 30vh;
+  background-color: red;
+}
+
+.date-hour-info {
+  margin: 1rem;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.hour-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue; /* Just for visual distinction */
+  text-align: center;
+  padding: 10px;
+  flex: 1;
+  height: fit-content;
+}
+
+.date-hour-info .hour-item img {
+  height: 64px;
+  width: auto;
+}
