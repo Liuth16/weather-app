@@ -14,16 +14,11 @@ function getInfo() {
         const data = await doQuery(location);
         const info = await findInfoByDate(data, date);
         const result = suggestLocation(location, info);
-        console.log(result);
-        if (!result.isExactMatch) {
-          console.log(`Result for: ${result.suggestedLocation}`);
-        }
         updateUI(result);
       } catch (error) {
-        console.error(error.message);
         showError(error.message);
       }
     });
 }
 
-export { getInfo };
+export default getInfo;
