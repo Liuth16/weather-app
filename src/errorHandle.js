@@ -1,7 +1,6 @@
 const ErrorManager = {
   dateError() {
     const error = new Error(
-      // eslint-disable-next-line prettier/prettier
       "You entered an invalid date (past or further than 15 days), please select a different one."
     );
     error.name = "dateError";

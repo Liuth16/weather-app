@@ -109,7 +109,6 @@ function updateUI(result) {
       year: "numeric",
       month: "long",
       day: "numeric",
-      // eslint-disable-next-line prettier/prettier
     }
   );
 
